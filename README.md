@@ -2,19 +2,20 @@
 
 <div align="center">
 
-![FarmSmart Banner](https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1400&auto=format&fit=crop)
+![FarmSmart Banner](https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1600&auto=format&fit=crop)
 
-### 🇷🇼 AI-Powered Smart Farming Assistant for Rwanda
+# 🇷🇼 AI-Powered Smart Farming Assistant for Rwanda
 
-Personalized fertilizer recommendations, climate insights, soil analysis, and agricultural market intelligence for smallholder farmers.
+### Personalized fertilizer recommendations, climate insights, soil analysis, and agricultural market intelligence for smallholder farmers.
 
 <br>
 
 [![Live Demo](https://img.shields.io/badge/🚀%20Live-Demo-green?style=for-the-badge)](https://huggingface.co/spaces/NSamson1/FarmSmart-Agentic-AI)
-[![HTML](https://img.shields.io/badge/HTML5-orange?style=for-the-badge&logo=html5)]()
-[![CSS](https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3)]()
+[![HTML5](https://img.shields.io/badge/HTML5-orange?style=for-the-badge&logo=html5)]()
+[![CSS3](https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3)]()
 [![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=javascript)]()
 [![AI Powered](https://img.shields.io/badge/AI-Agentic%20AI-success?style=for-the-badge)]()
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-Spaces-yellow?style=for-the-badge)]()
 
 </div>
 
@@ -33,11 +34,39 @@ https://huggingface.co/spaces/NSamson1/FarmSmart-Agentic-AI
 
 <div align="center">
 
+## 🌱 FarmSmart AI Dashboard
+
 <img width="100%" alt="FarmSmart Dashboard" src="https://github.com/user-attachments/assets/d4838136-04d3-4070-af0b-ce98d93aecc9"/>
 
 <br><br>
 
-<img width="100%" src="https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?q=80&w=1400&auto=format&fit=crop" />
+## 🚜 Smart Farming & AI Agriculture
+
+<img width="100%" src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1400&auto=format&fit=crop"/>
+
+<br><br>
+
+<img width="100%" src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1400&auto=format&fit=crop"/>
+
+<br><br>
+
+<img width="100%" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&auto=format&fit=crop"/>
+
+<br><br>
+
+<img width="100%" src="https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?q=80&w=1400&auto=format&fit=crop"/>
+
+<br><br>
+
+<img width="100%" src="https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=1400&auto=format&fit=crop"/>
+
+<br><br>
+
+<img width="100%" src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1400&auto=format&fit=crop"/>
+
+<br><br>
+
+<img width="100%" src="https://images.unsplash.com/photo-1492496913980-501348b61469?q=80&w=1400&auto=format&fit=crop"/>
 
 </div>
 
@@ -66,6 +95,7 @@ to help farmers make smarter, data-driven decisions.
 ✅ Extension Officers  
 ✅ Agritech Innovators  
 ✅ Smart Agriculture Initiatives  
+✅ AI for Agriculture Research  
 
 ---
 
@@ -122,6 +152,7 @@ Analyze important soil properties:
 ✅ Soil improvement practices  
 ✅ Fertility evaluation  
 ✅ Nutrient visualization  
+✅ Soil nutrient tracking  
 
 ---
 
@@ -134,6 +165,7 @@ Smart irrigation and conservation recommendations:
 - 🌿 Mulching
 - ⛰️ Terracing
 - 💦 Drip irrigation systems
+- 🌱 Sustainable agriculture practices
 
 ---
 
@@ -158,6 +190,7 @@ Powered by advanced conversational AI to answer:
 - 🧪 Soil management
 - 🌦️ Seasonal farming guidance
 - 📈 Market advice
+- 🚜 Smart farming recommendations
 
 ---
 
@@ -188,7 +221,11 @@ FarmSmart currently supports agricultural recommendations across multiple distri
 - Rusizi
 - Karongi
 - Nyabihu
-- And many more...
+- Nyanza
+- Muhanga
+- Gicumbi
+- Burera
+- and many more...
 
 ---
 
@@ -228,14 +265,18 @@ The project integrates agricultural information from:
 ## Clone Repository
 
 ```bash
-git clone https://github.com/samson19977/-FarmSmart-Agentic-AI.git
+git clone https://github.com/samson19977/FarmSmart-Agentic-AI.git
 ```
+
+---
 
 ## Open Project
 
 ```bash
-cd -FarmSmart-Agentic-AI
+cd FarmSmart-Agentic-AI
 ```
+
+---
 
 ## Run Locally
 
@@ -257,7 +298,9 @@ FarmSmart-Agentic-AI/
 ├── index.html
 ├── style.css
 ├── README.md
-└── assets/
+├── assets/
+│
+└── scripts/
 ```
 
 ---
@@ -271,16 +314,35 @@ FarmSmart-Agentic-AI/
 - 🤝 Farmer cooperative dashboard
 - 📊 ML-based crop yield prediction
 - 🔔 SMS farming alerts
+- 🧠 Advanced AI recommendations
+- 📡 IoT farm sensor integration
+
+---
+
+# 📈 Potential Impact
+
+FarmSmart aims to help:
+
+✅ Increase crop productivity  
+✅ Improve fertilizer efficiency  
+✅ Reduce farming costs  
+✅ Enhance climate resilience  
+✅ Support sustainable agriculture  
+✅ Empower African farmers with AI  
 
 ---
 
 # 👨‍💻 Developer
 
-## Samson Niyizurugero
+<div align="center">
 
-### Data Engineer | AI & Smart Agriculture Enthusiast
+# Samson Niyizurugero
+
+### Data Engineer • AI Enthusiast • Smart Agriculture Innovator
 
 Passionate about using Artificial Intelligence and Data Science to transform African agriculture and empower smallholder farmers.
+
+</div>
 
 ---
 
@@ -317,6 +379,7 @@ If you like this project:
 ⭐ Star the repository  
 🍴 Fork the project  
 📢 Share with others  
+💚 Support AI for Agriculture  
 
 ---
 
@@ -333,5 +396,9 @@ If you like this project:
 # 🌱 FarmSmart Rwanda
 
 ## Smart Farming • Smart Decisions • Smart Future 🇷🇼
+
+<br>
+
+### Built with ❤️ for African Agriculture
 
 </div>
