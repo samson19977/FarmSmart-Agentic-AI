@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FarmSmart Agentic AI – Rwanda</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="nav-inner">
+    <a href="#home" class="logo">
+      <div class="logo-icon">🌱</div>
+      <span class="logo-text">Farm<span>Smart</span> Rwanda</span>
+    </a>
+    <nav id="desktop-nav">
+      <a href="#home">Home</a>
+      <a href="#crop-advisor">Crop Advisor</a>
+      <a href="#climate">Climate</a>
+      <a href="#market">Market</a>
+      <a href="#soil-water">Soil & Water</a>
+      <a href="#about">About</a>
+    </nav>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </div>
+  <div id="mobile-nav">
+    <a href="#home">Home</a>
+    <a href="#crop-advisor">Crop Advisor</a>
+    <a href="#climate">Climate</a>
+    <a href="#market">Market</a>
+    <a href="#soil-water">Soil &amp; Water</a>
+    <a href="#about">About</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Smart Farming,<br>Smart Choices</h1>
+    <p>🌱 Personalized Fertilizer & Crop Advice for Rwandan Farmers – Powered by Agentic AI</p>
+    <a href="#crop-advisor" class="hero-btn"><i class="fas fa-robot"></i> Get Your Free Advice</a>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="section-wrap" style="padding-top:0;padding-bottom:0;">
+    <h2 class="section-title">How FarmSmart Helps You</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
+        <h3>Seasonal Advice</h3>
+        <p>Recommendations tailored to Rwanda's three growing seasons (A, B, C).</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-cloud-sun-rain"></i></div>
+        <h3>Climate Analysis</h3>
+        <p>Localized weather forecasts and historical data for your district.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-flask"></i></div>
+        <h3>Soil-Specific Fertilizer</h3>
+        <p>Based on your soil's pH, nitrogen, phosphorus, and potassium levels.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-seedling"></i></div>
+        <h3>Inter-Cropping</h3>
+        <p>Crop combinations that improve soil health and increase income.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-tint"></i></div>
+        <h3>Water Management</h3>
+        <p>Irrigation advice based on crop needs and local rainfall patterns.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Market Prices</h3>
+        <p>Current market prices in RWF and demand forecasts for major crops.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CROP ADVISOR -->
+<section id="crop-advisor">
+  <div class="section-wrap">
+    <h2 class="section-title">🌾 Fertilizer Advisor</h2>
+
+    <div class="card">
+      <div class="form-grid">
+        <div>
+          <label>1. District</label>
+          <select id="district">
+            <option>Gasabo</option><option>Kicukiro</option><option>Nyarugenge</option><option>Bugesera</option>
+            <option>Gatsibo</option><option>Kayonza</option><option>Ngoma</option><option>Nyagatare</option>
+            <option>Rwamagana</option><option>Burera</option><option>Gakenke</option><option>Gicumbi</option>
+            <option>Musanze</option><option>Rulindo</option><option>Nyabihu</option><option>Ngororero</option>
+            <option>Rubavu</option><option>Rutsiro</option><option>Karongi</option><option>Nyanza</option>
+            <option>Ruhango</option><option>Nyamagabe</option><option>Muhanga</option><option>Kamonyi</option>
+            <option>Gisagara</option><option>Huye</option><option>Nyamasheke</option><option>Rusizi</option>
+          </select>
+        </div>
+        <div>
+          <label>2. Soil Type</label>
+          <select id="soilType">
+            <option value="Acrisol">Acrisol (Sandy loam)</option>
+            <option value="Ferralsol">Ferralsol (Red clay)</option>
+            <option value="Andosol">Andosol (Volcanic ash)</option>
+            <option value="Histosol">Histosol (Peaty)</option>
+            <option value="Vertisol">Vertisol (Black clay)</option>
+            <option value="Regosol">Regosol (Sandy)</option>
+            <option value="Luvisol">Luvisol (Loamy)</option>
+          </select>
+        </div>
+        <div>
+          <label>3. Crop</label>
+          <select id="crop">
+            <option>Maize</option><option>Beans</option><option>Irish Potatoes</option><option>Cassava</option>
+            <option>Banana</option><option>Sorghum</option><option>Rice</option><option>Wheat</option>
+          </select>
+        </div>
+        <div>
+          <label>4. Season</label>
+          <select id="season">
+            <option>Season A (Sep–Jan)</option>
+            <option>Season B (Feb–Jun)</option>
+            <option>Season C (Jul–Aug)</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn-primary" id="getAdviceBtn"><i class="fas fa-robot"></i> Run Agentic AI</button>
+    </div>
+
+    <!-- Agent thinking -->
+    <div class="card agent-box hidden" id="agent-thinking">
+      <h3 style="font-weight:700;color:var(--green-dark);margin-bottom:1rem;">🤖 Agent at Work</h3>
+      <div class="step active" id="step1"><span class="dot"></span> Interpreting your query...</div>
+      <div class="step" id="step2"><span class="dot"></span> Querying Soil Database...</div>
+      <div class="step" id="step3"><span class="dot"></span> Fetching Weather API...</div>
+      <div class="step" id="step4"><span class="dot"></span> Running Fertilizer Calculator...</div>
+    </div>
+
+    <!-- Recommendation -->
+    <div class="card rec-card hidden" id="recommendation">
+      <h3 style="font-weight:800;color:var(--green-dark);font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:0.5rem;">🌱 Personalized Recommendation</h3>
+      <div id="rec-meta" style="color:var(--text-light);font-size:0.9rem;margin-bottom:1.25rem;"></div>
+      <div class="rec-section">
+        <h4>Soil Status</h4>
+        <div id="rec-soil-bars"></div>
+      </div>
+      <div class="rec-section">
+        <h4>Recommended Fertilizer (kg/ha)</h4>
+        <div class="rec-grid" id="rec-fert-grid"></div>
+      </div>
+      <div class="rec-section">
+        <h4>Product Equivalents</h4>
+        <div class="rec-grid" id="rec-products"></div>
+      </div>
+      <div class="tip-box" id="rec-tip"></div>
+    </div>
+
+    <!-- Chat -->
+    <div class="card" style="margin-top:2rem;">
+      <h3 style="font-weight:700;color:var(--green-dark);margin-bottom:1rem;">💬 Chat with FarmSmart Agent</h3>
+      <div id="chatMessages">
+        <div class="msg-bot">Hello! I'm your FarmSmart AI assistant. Ask me about fertilizers, soil management, crop diseases, market prices, or any farming question for Rwanda. 🌾</div>
+      </div>
+      <div class="chat-input-row">
+        <input type="text" id="chatInput" placeholder="e.g., What fertilizer for maize in Musanze?">
+        <button id="sendChatBtn"><i class="fas fa-paper-plane"></i> Send</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIMATE -->
+<section id="climate">
+  <div class="section-wrap">
+    <h2 class="section-title">☁️ Climate Dashboard</h2>
+    <div class="climate-grid">
+      <div class="climate-card">
+        <h3>Today – Kigali</h3>
+        <div class="climate-val">24°C</div>
+        <div class="climate-sub">☁️ Partly cloudy · 70% humidity</div>
+      </div>
+      <div class="climate-card" style="background:linear-gradient(135deg,#0369a1,#0ea5e9);">
+        <h3>Rainfall This Month</h3>
+        <div class="climate-val">45mm</div>
+        <div class="climate-sub">⬇️ Below average (normal: 75mm)</div>
+      </div>
+      <div class="climate-card" style="background:linear-gradient(135deg,#854d0e,#d97706);">
+        <h3>Season Outlook</h3>
+        <div class="climate-val" style="font-size:1.5rem;">Season B</div>
+        <div class="climate-sub">🌦️ Normal rains expected</div>
+      </div>
+      <div class="climate-card" style="background:linear-gradient(135deg,#4f46e5,#7c3aed);">
+        <h3>Forecast 7-Day</h3>
+        <div class="climate-val" style="font-size:1.3rem;">22–27°C</div>
+        <div class="climate-sub">🌤️ Scattered showers mid-week</div>
+      </div>
+    </div>
+
+    <div class="season-timeline" style="margin-top:2rem;">
+      <div class="season-block season-a">
+        <strong>Season A</strong>
+        <span>September – January</span>
+        <p style="font-size:0.8rem;margin-top:0.5rem;color:#166534;">Main rainy season. Best for maize, beans, wheat, potatoes.</p>
+      </div>
+      <div class="season-block season-b">
+        <strong>Season B</strong>
+        <span>February – June</span>
+        <p style="font-size:0.8rem;margin-top:0.5rem;color:#1e40af;">Long rains. Ideal for rice, sorghum, cassava, bananas.</p>
+      </div>
+      <div class="season-block season-c">
+        <strong>Season C</strong>
+        <span>July – August</span>
+        <p style="font-size:0.8rem;margin-top:0.5rem;color:#854d0e;">Dry season. Irrigated rice & vegetables only.</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:2rem;">
+      <h3 style="font-weight:700;color:var(--green-dark);margin-bottom:1rem;">Regional Temperature & Rainfall (Annual Avg)</h3>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.9rem;">
+          <thead>
+            <tr style="background:var(--green-pale);">
+              <th style="padding:0.7rem;text-align:left;color:var(--green-dark);">Province</th>
+              <th style="padding:0.7rem;text-align:center;">Avg Temp (°C)</th>
+              <th style="padding:0.7rem;text-align:center;">Rainfall (mm/yr)</th>
+              <th style="padding:0.7rem;text-align:center;">Best Crops</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #e8f5e9;"><td style="padding:0.7rem;">Kigali City</td><td style="text-align:center;">19–24</td><td style="text-align:center;">1,050</td><td style="text-align:center;">Maize, Beans</td></tr>
+            <tr style="border-bottom:1px solid #e8f5e9;"><td style="padding:0.7rem;">Northern Province</td><td style="text-align:center;">15–22</td><td style="text-align:center;">1,400</td><td style="text-align:center;">Irish Potatoes, Wheat</td></tr>
+            <tr style="border-bottom:1px solid #e8f5e9;"><td style="padding:0.7rem;">Southern Province</td><td style="text-align:center;">17–23</td><td style="text-align:center;">1,100</td><td style="text-align:center;">Banana, Sorghum</td></tr>
+            <tr style="border-bottom:1px solid #e8f5e9;"><td style="padding:0.7rem;">Eastern Province</td><td style="text-align:center;">20–28</td><td style="text-align:center;">850</td><td style="text-align:center;">Maize, Cassava</td></tr>
+            <tr><td style="padding:0.7rem;">Western Province</td><td style="text-align:center;">17–25</td><td style="text-align:center;">1,200</td><td style="text-align:center;">Rice, Banana</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKET -->
+<section id="market">
+  <div class="section-wrap">
+    <h2 class="section-title">📈 Market Prices</h2>
+    <p style="text-align:center;color:var(--text-light);margin-bottom:2rem;font-size:0.95rem;">Current farmgate prices in RWF · Updated weekly from major markets</p>
+
+    <div class="market-grid">
+      <div class="price-card"><div class="crop-name">🌽 Maize</div><div class="price">RWF 280<span class="unit">/kg</span></div><span class="trend trend-up">▲ +5% this week</span></div>
+      <div class="price-card"><div class="crop-name">🫘 Beans (Common)</div><div class="price">RWF 620<span class="unit">/kg</span></div><span class="trend trend-stable">→ Stable</span></div>
+      <div class="price-card"><div class="crop-name">🥔 Irish Potatoes</div><div class="price">RWF 200<span class="unit">/kg</span></div><span class="trend trend-down">▼ -3% harvest season</span></div>
+      <div class="price-card"><div class="crop-name">🍌 Banana</div><div class="price">RWF 150<span class="unit">/kg</span></div><span class="trend trend-up">▲ +8% demand up</span></div>
+      <div class="price-card"><div class="crop-name">🌾 Sorghum</div><div class="price">RWF 310<span class="unit">/kg</span></div><span class="trend trend-stable">→ Stable</span></div>
+      <div class="price-card"><div class="crop-name">🍚 Rice (paddy)</div><div class="price">RWF 480<span class="unit">/kg</span></div><span class="trend trend-up">▲ +2% import pressure</span></div>
+      <div class="price-card"><div class="crop-name">🥬 Cassava</div><div class="price">RWF 120<span class="unit">/kg</span></div><span class="trend trend-stable">→ Stable</span></div>
+      <div class="price-card"><div class="crop-name">🌾 Wheat</div><div class="price">RWF 350<span class="unit">/kg</span></div><span class="trend trend-down">▼ -1% oversupply</span></div>
+    </div>
+
+    <div class="market-advice">
+      <h3>📊 Market Intelligence &amp; Selling Tips</h3>
+      <div class="advice-row">
+        <div class="advice-icon">🌽</div>
+        <div class="advice-text">
+          <strong>Maize – Hold or Sell Now?</strong>
+          <span>Prices rising 5% this week due to reduced Eastern Province supply. Consider selling within 2 weeks before new Season B harvest enters market (Feb–Mar).</span>
+        </div>
+      </div>
+      <div class="advice-row">
+        <div class="advice-icon">🥔</div>
+        <div class="advice-text">
+          <strong>Irish Potatoes – Wait</strong>
+          <span>Prices currently down 3% due to Musanze/Burera harvest season. Expected to recover to RWF 230–250/kg by July. Storage recommended if possible.</span>
+        </div>
+      </div>
+      <div class="advice-row">
+        <div class="advice-icon">🍌</div>
+        <div class="advice-text">
+          <strong>Banana – Strong Demand</strong>
+          <span>Urban demand in Kigali growing. Prices up 8%. Best market: Kimironko &amp; Nyabugogo wholesale. Transport within 2–3 days of harvest for best price.</span>
+        </div>
+      </div>
+      <div class="advice-row">
+        <div class="advice-icon">🏪</div>
+        <div class="advice-text">
+          <strong>Top Markets by Volume</strong>
+          <span>Kimironko (Kigali), Nyabugogo (Kigali), Musanze Town, Huye Market, Nyagatare Central Market.</span>
+        </div>
+      </div>
+      <div class="advice-row">
+        <div class="advice-icon">📱</div>
+        <div class="advice-text">
+          <strong>Digital Sales Channels</strong>
+          <span>Register on Rwanda Agriculture Board's e-Soko platform to access direct buyer contacts and real-time price alerts.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOIL & WATER -->
+<section id="soil-water">
+  <div class="section-wrap">
+    <h2 class="section-title">🧪 Soil &amp; Water Management</h2>
+    <div class="sw-grid">
+
+      <!-- Soil Checker -->
+      <div>
+        <div class="soil-form-card">
+          <h3 style="font-weight:700;color:var(--green-dark);margin-bottom:1.25rem;">Soil Health Checker</h3>
+          <div style="margin-bottom:1rem;">
+            <label>District</label>
+            <select id="sw-district">
+              <option>Gasabo</option><option>Kicukiro</option><option>Nyarugenge</option><option>Bugesera</option>
+              <option>Gatsibo</option><option>Kayonza</option><option>Ngoma</option><option>Nyagatare</option>
+              <option>Rwamagana</option><option>Burera</option><option>Gakenke</option><option>Gicumbi</option>
+              <option>Musanze</option><option>Rulindo</option><option>Nyabihu</option><option>Ngororero</option>
+              <option>Rubavu</option><option>Rutsiro</option><option>Karongi</option><option>Nyanza</option>
+              <option>Ruhango</option><option>Nyamagabe</option><option>Muhanga</option><option>Kamonyi</option>
+              <option>Gisagara</option><option>Huye</option><option>Nyamasheke</option><option>Rusizi</option>
+            </select>
+          </div>
+          <button class="btn-primary" id="checkSoilBtn" style="width:100%;justify-content:center;">
+            <i class="fas fa-search"></i> Check Soil Health
+          </button>
+        </div>
+
+        <div class="soil-result" id="soil-result" style="margin-top:1.5rem;">
+          <p style="color:var(--text-light);font-style:italic;">Select a district and click "Check Soil Health" to see results.</p>
+        </div>
+      </div>
+
+      <!-- Water Management -->
+      <div>
+        <div class="card" style="margin-bottom:0;">
+          <h3 style="font-weight:700;color:var(--green-dark);margin-bottom:1rem;">💧 Water Management Guide</h3>
+          <div class="water-tips">
+            <div class="water-tip">
+              <div class="wt-icon">🌧️</div>
+              <strong>Rainwater Harvesting</strong>
+              <span>Install catchment systems on hillsides. 1ha roof collects ~800,000L/yr at 800mm rainfall.</span>
+            </div>
+            <div class="water-tip" style="background:#dcfce7;">
+              <div class="wt-icon">🚿</div>
+              <strong>Drip Irrigation</strong>
+              <span>Saves 40–60% water vs flood irrigation. Ideal for vegetables and Irish potatoes in dry season.</span>
+            </div>
+            <div class="water-tip" style="background:#fef9c3;">
+              <div class="wt-icon">🌿</div>
+              <strong>Mulching</strong>
+              <span>Apply 5–10cm organic mulch to reduce soil evaporation by up to 50% during dry spells.</span>
+            </div>
+            <div class="water-tip" style="background:#fce7f3;">
+              <div class="wt-icon">⛰️</div>
+              <strong>Terracing</strong>
+              <span>Rwanda's hillside terraces (imidugudu) reduce runoff by 70% and prevent erosion.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:1.5rem;">
+          <h3 style="font-weight:700;color:var(--green-dark);margin-bottom:1rem;">🌱 Soil Improvement Practices</h3>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem;">
+            <li style="display:flex;gap:10px;font-size:0.9rem;"><span style="color:var(--green-bright);font-weight:700;">①</span><span><strong>Compost application</strong> – 5–10 t/ha of organic compost increases soil organic matter and microbial activity.</span></li>
+            <li style="display:flex;gap:10px;font-size:0.9rem;"><span style="color:var(--green-bright);font-weight:700;">②</span><span><strong>Lime amendment</strong> – Apply dolomitic limestone (1–3 t/ha) to raise pH on acidic soils below 5.5.</span></li>
+            <li style="display:flex;gap:10px;font-size:0.9rem;"><span style="color:var(--green-bright);font-weight:700;">③</span><span><strong>Green manure</strong> – Mucuna pruriens, Tithonia, or Calliandra as cover crops between seasons.</span></li>
+            <li style="display:flex;gap:10px;font-size:0.9rem;"><span style="color:var(--green-bright);font-weight:700;">④</span><span><strong>Crop rotation</strong> – Alternate cereals with legumes to restore nitrogen naturally.</span></li>
+            <li style="display:flex;gap:10px;font-size:0.9rem;"><span style="color:var(--green-bright);font-weight:700;">⑤</span><span><strong>Minimum tillage</strong> – Reduce tillage to preserve soil structure and beneficial organisms.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-inner">
+    <h2 class="section-title" style="text-align:center;">About FarmSmart Rwanda</h2>
+    <div class="about-grid">
+      <div class="about-col">
+        <h3>Our Mission</h3>
+        <p>FarmSmart Rwanda is an AI-powered agricultural advisory platform developed by <strong>AIMSRIC</strong> to help smallholder farmers across Rwanda make data-driven decisions.</p>
+        <p>We combine soil science, agrometeorology, and market intelligence with modern AI to deliver personalized, actionable recommendations — in the language that works for you.</p>
+        <h3 style="margin-top:1.5rem;">Data Sources</h3>
+        <ul class="data-sources">
+          <li>Rwanda Soil Information System (RSIS)</li>
+          <li>Rwanda Meteorology Agency (Meteo Rwanda)</li>
+          <li>FAO GAEZ Agro-ecological Zone Data</li>
+          <li>Rwanda Agriculture Board (RAB)</li>
+          <li>e-Soko Market Information System</li>
+          <li>National Institute of Statistics Rwanda</li>
+        </ul>
+      </div>
+      <div class="about-col">
+        <h3>Impact</h3>
+        <div class="about-stat"><div class="big">28</div><div class="lbl">Districts covered</div></div>
+        <div class="about-stat"><div class="big">8</div><div class="lbl">Major crops supported</div></div>
+        <div class="about-stat"><div class="big">3</div><div class="lbl">Growing seasons analyzed</div></div>
+        <h3 style="margin-top:1.5rem;">Technology</h3>
+        <p>Built on the Claude AI API (Anthropic) with real-time soil and weather data pipelines. Optimized for low-bandwidth mobile use by rural farmers.</p>
+        <h3 style="margin-top:1.5rem;">Team</h3>
+        <p><strong style="color:var(--green-light);">Samson Niyizurugero</strong> — Data Engineer</p>
+        <p style="margin-top:0.75rem;font-size:0.85rem;color:rgba(255,255,255,0.5);">© 2026 FarmSmart Rwanda – AIMSRIC. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong>FarmSmart Rwanda</strong> · AIMSRIC · 2026</p>
+  <p style="margin-top:0.4rem;">Data: Rwanda Soil Information System (simplified) · FAO · Rwanda Meteorology Agency</p>
+  <p style="margin-top:0.4rem;">Data Engineer: <strong>Samson Niyizurugero</strong></p>
+</footer>
+
+<script>
+// ---- DATA ----
+const soilData = [
+  { District:"Gasabo",pH:5.5,N:15,P:8,K:60 }, { District:"Kicukiro",pH:5.2,N:12,P:6,K:45 },
+  { District:"Nyarugenge",pH:6.0,N:18,P:10,K:80 }, { District:"Bugesera",pH:5.0,N:10,P:5,K:40 },
+  { District:"Gatsibo",pH:6.2,N:25,P:12,K:90 }, { District:"Kayonza",pH:5.4,N:14,P:7,K:55 },
+  { District:"Ngoma",pH:5.1,N:11,P:5,K:42 }, { District:"Nyagatare",pH:6.8,N:30,P:15,K:110 },
+  { District:"Rwamagana",pH:5.3,N:13,P:6,K:50 }, { District:"Burera",pH:5.8,N:20,P:9,K:70 },
+  { District:"Gakenke",pH:5.9,N:22,P:10,K:75 }, { District:"Gicumbi",pH:5.4,N:14,P:7,K:52 },
+  { District:"Musanze",pH:6.0,N:25,P:12,K:95 }, { District:"Rulindo",pH:5.5,N:16,P:8,K:62 },
+  { District:"Nyabihu",pH:5.9,N:21,P:10,K:73 }, { District:"Ngororero",pH:5.4,N:14,P:7,K:50 },
+  { District:"Rubavu",pH:5.7,N:18,P:8,K:65 }, { District:"Rutsiro",pH:5.0,N:10,P:5,K:38 },
+  { District:"Karongi",pH:5.2,N:12,P:6,K:46 }, { District:"Nyanza",pH:5.5,N:15,P:8,K:60 },
+  { District:"Ruhango",pH:5.1,N:11,P:5,K:40 }, { District:"Nyamagabe",pH:5.4,N:14,P:7,K:52 },
+  { District:"Muhanga",pH:5.2,N:12,P:6,K:44 }, { District:"Kamonyi",pH:5.5,N:15,P:8,K:58 },
+  { District:"Gisagara",pH:5.1,N:11,P:5,K:38 }, { District:"Huye",pH:5.5,N:15,P:8,K:60 },
+  { District:"Nyamasheke",pH:5.2,N:12,P:6,K:45 }, { District:"Rusizi",pH:5.3,N:13,P:6,K:48 }
+];
+
+const cropReq = {
+  "Maize":{N:120,P:30,K:40}, "Beans":{N:40,P:30,K:30}, "Irish Potatoes":{N:150,P:50,K:120},
+  "Cassava":{N:80,P:20,K:100}, "Banana":{N:200,P:30,K:300}, "Sorghum":{N:80,P:20,K:30},
+  "Rice":{N:100,P:30,K:40}, "Wheat":{N:120,P:30,K:40}
+};
+
+function getSoil(district) { return soilData.find(d => d.District === district) || soilData[0]; }
+
+function recommendFertilizer(crop, soil) {
+  const req = cropReq[crop] || {N:100,P:30,K:40};
+  const cf = 2;
+  const recN = Math.max(0, (req.N - soil.N*cf*0.3) / 0.5);
+  const recP = Math.max(0, (req.P - soil.P*cf*0.1) / 0.5);
+  const recK = Math.max(0, (req.K - soil.K*cf*0.2) / 0.5);
+  return {
+    N:Math.round(recN), P:Math.round(recP), K:Math.round(recK),
+    Urea:Math.round(recN/0.46), DAP:recP>0?Math.round(recP/0.46):0, MOP:Math.round(recK/0.6)
+  };
+}
+
+// ---- ADVISOR ----
+document.getElementById('getAdviceBtn').addEventListener('click', () => {
+  const district = document.getElementById('district').value;
+  const crop = document.getElementById('crop').value;
+  const season = document.getElementById('season').value;
+  const soil = getSoil(district);
+  const fert = recommendFertilizer(crop, soil);
+
+  const thinkEl = document.getElementById('agent-thinking');
+  const recEl = document.getElementById('recommendation');
+  thinkEl.classList.remove('hidden');
+  recEl.classList.add('hidden');
+
+  const steps = ['step1','step2','step3','step4'];
+  steps.forEach(s => { const el = document.getElementById(s); el.className='step'; });
+  document.getElementById('step1').className = 'step active';
+
+  let i = 0;
+  const interval = setInterval(() => {
+    document.getElementById(steps[i]).className = 'step done';
+    i++;
+    if (i < steps.length) document.getElementById(steps[i]).className = 'step active';
+    else {
+      clearInterval(interval);
+      setTimeout(() => {
+        thinkEl.classList.add('hidden');
+        showRecommendation(crop, district, season, soil, fert);
+        recEl.classList.remove('hidden');
+      }, 400);
+    }
+  }, 700);
+});
+
+function showRecommendation(crop, district, season, soil, fert) {
+  document.getElementById('rec-meta').innerHTML =
+    `<strong>${crop}</strong> · ${district} · ${season}`;
+
+  const bars = document.getElementById('rec-soil-bars');
+  bars.innerHTML = `
+    <div style="margin-bottom:0.5rem;display:flex;align-items:center;gap:10px;">
+      <span style="font-size:0.85rem;font-weight:600;width:80px;color:var(--text-light);">pH ${soil.pH}</span>
+      <div style="flex:1;height:14px;background:#e8f5e9;border-radius:20px;overflow:hidden;">
+        <div style="width:${(soil.pH/9)*100}%;height:100%;background:linear-gradient(to right,#dc2626,#facc15,#22c55e);border-radius:20px;"></div>
+      </div>
+    </div>
+    ${['N','P','K'].map((n,idx) => {
+      const v = [soil.N,soil.P,soil.K][idx];
+      const max = [40,20,150][idx];
+      const col = ['#40916c','#f4a261','#48cae4'][idx];
+      return `<div class="npk-bar-row"><span class="npk-label">${n}</span><div class="npk-track"><div class="npk-fill" style="width:${Math.min(100,(v/max)*100)}%;background:${col};"></div></div><span class="npk-val">${v} mg/kg</span></div>`;
+    }).join('')}`;
+
+  document.getElementById('rec-fert-grid').innerHTML = `
+    <div class="rec-item"><div class="val">${fert.N}</div><div class="lbl">Nitrogen (kg/ha)</div></div>
+    <div class="rec-item"><div class="val">${fert.P}</div><div class="lbl">Phosphorus (kg/ha)</div></div>
+    <div class="rec-item"><div class="val">${fert.K}</div><div class="lbl">Potassium (kg/ha)</div></div>`;
+
+  document.getElementById('rec-products').innerHTML = `
+    <div class="rec-item" style="background:#e0f2fe;"><div class="val">${fert.Urea}</div><div class="lbl">Urea 46-0-0 (kg/ha)</div></div>
+    <div class="rec-item" style="background:#fef9c3;"><div class="val">${fert.DAP}</div><div class="lbl">DAP 18-46-0 (kg/ha)</div></div>
+    <div class="rec-item" style="background:#fce7f3;"><div class="val">${fert.MOP}</div><div class="lbl">MOP 0-0-60 (kg/ha)</div></div>`;
+
+  const tips = {
+    "Maize": "Apply DAP at planting (basal), Urea in two splits: 3 weeks and 6 weeks after emergence.",
+    "Beans": "Beans fix atmospheric nitrogen. Minimize N fertilizer; focus on P for root development.",
+    "Irish Potatoes": "Apply fertilizer in furrows at planting. Hill up soil 3 weeks after emergence.",
+    "Cassava": "Cassava tolerates low fertility. Apply K before planting; avoid excess N (favors foliage over roots).",
+    "Banana": "Apply fertilizer in a ring 30–50cm from the stem. Split into 3–4 applications per year.",
+    "Sorghum": "Drought-tolerant; apply N in split doses. Avoid waterlogging.",
+    "Rice": "Apply Urea in 3 splits: basal, active tillering, panicle initiation. Maintain 5cm water depth.",
+    "Wheat": "Apply DAP at planting; top-dress with CAN at tillering stage. Well-drained soils preferred."
+  };
+  document.getElementById('rec-tip').innerHTML = `💡 <strong>Application Tip:</strong> ${tips[crop] || 'Apply in split doses and incorporate into soil before rain.'}`;
+}
+
+// ---- SOIL & WATER ----
+document.getElementById('checkSoilBtn').addEventListener('click', () => {
+  const district = document.getElementById('sw-district').value;
+  const soil = getSoil(district);
+  const phStatus = soil.pH < 5.2 ? 'Strongly Acidic ⚠️' : soil.pH < 5.8 ? 'Moderately Acidic' : soil.pH < 7.0 ? 'Optimal ✅' : 'Alkaline';
+  const limeRec = soil.pH < 5.5 ? `Apply 2–3 t/ha dolomitic lime to raise pH to optimal range (6.0–6.5).` : soil.pH < 5.8 ? `Apply 0.5–1 t/ha lime. Soil is slightly acidic.` : `No lime needed. pH is optimal.`;
+  const nStatus = soil.N < 12 ? 'Low 🔴' : soil.N < 20 ? 'Moderate 🟡' : 'Good 🟢';
+  const pStatus = soil.P < 6 ? 'Low 🔴' : soil.P < 10 ? 'Moderate 🟡' : 'Good 🟢';
+  const kStatus = soil.K < 45 ? 'Low 🔴' : soil.K < 80 ? 'Moderate 🟡' : 'Good 🟢';
+
+  document.getElementById('soil-result').innerHTML = `
+    <h4 style="font-weight:700;color:var(--green-dark);margin-bottom:1rem;">${district} Soil Report</h4>
+    <div style="margin-bottom:1rem;">
+      <div style="display:flex;justify-content:space-between;margin-bottom:0.3rem;font-size:0.85rem;"><span>pH: <strong>${soil.pH}</strong> – ${phStatus}</span></div>
+      <div class="ph-bar"><div class="ph-marker" style="left:${((soil.pH-3)/11)*100}%"></div></div>
+      <p style="font-size:0.82rem;color:var(--text-light);">${limeRec}</p>
+    </div>
+    <div class="npk-bar-row"><span class="npk-label">N</span><div class="npk-track"><div class="npk-fill npk-n" style="width:${Math.min(100,(soil.N/40)*100)}%"></div></div><span class="npk-val">${soil.N} mg/kg</span></div>
+    <div style="font-size:0.8rem;color:var(--text-light);margin-bottom:0.75rem;">Status: ${nStatus}</div>
+    <div class="npk-bar-row"><span class="npk-label">P</span><div class="npk-track"><div class="npk-fill npk-p" style="width:${Math.min(100,(soil.P/20)*100)}%"></div></div><span class="npk-val">${soil.P} mg/kg</span></div>
+    <div style="font-size:0.8rem;color:var(--text-light);margin-bottom:0.75rem;">Status: ${pStatus}</div>
+    <div class="npk-bar-row"><span class="npk-label">K</span><div class="npk-track"><div class="npk-fill npk-k" style="width:${Math.min(100,(soil.K/150)*100)}%"></div></div><span class="npk-val">${soil.K} mg/kg</span></div>
+    <div style="font-size:0.8rem;color:var(--text-light);margin-bottom:0.75rem;">Status: ${kStatus}</div>
+  `;
+});
+
+// ---- CHAT with Claude API ----
+const chatMessages = document.getElementById('chatMessages');
+const chatInput = document.getElementById('chatInput');
+const conversationHistory = [];
+
+function addMsg(text, isUser) {
+  const div = document.createElement('div');
+  div.className = isUser ? 'msg-user' : 'msg-bot';
+  div.textContent = text;
+  chatMessages.appendChild(div);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+  return div;
+}
+
+async function sendMessage() {
+  const q = chatInput.value.trim();
+  if (!q) return;
+  addMsg(q, true);
+  chatInput.value = '';
+  conversationHistory.push({ role: 'user', content: q });
+
+  const typingDiv = addMsg('Thinking...', false);
+  typingDiv.classList.add('msg-typing');
+
+  try {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        system: `You are FarmSmart, an expert agricultural AI assistant for Rwanda. You help smallholder farmers with:
+- Fertilizer recommendations based on soil type and crop
+- Crop management advice for Rwanda's three seasons (A: Sep-Jan, B: Feb-Jun, C: Jul-Aug)
+- Soil health and improvement practices
+- Water and irrigation management
+- Market prices and selling strategies
+- Common pests, diseases, and integrated pest management
+Keep answers practical, concise, and specific to Rwandan farming conditions. Use RWF for prices. When relevant, reference Rwanda's 28 districts and 5 provinces.`,
+        messages: conversationHistory
+      })
+    });
+    const data = await response.json();
+    const reply = data.content?.[0]?.text || 'Sorry, I could not get a response. Please try again.';
+    typingDiv.remove();
+    addMsg(reply, false);
+    conversationHistory.push({ role: 'assistant', content: reply });
+  } catch (err) {
+    typingDiv.remove();
+    addMsg('Sorry, there was a connection error. Please check your internet and try again.', false);
+  }
+}
+
+document.getElementById('sendChatBtn').addEventListener('click', sendMessage);
+chatInput.addEventListener('keydown', e => { if (e.key === 'Enter') sendMessage(); });
+
+// ---- MOBILE NAV ----
+document.getElementById('hamburger').addEventListener('click', () => {
+  const m = document.getElementById('mobile-nav');
+  m.style.display = m.style.display === 'block' ? 'none' : 'block';
+});
+document.querySelectorAll('#mobile-nav a').forEach(a => {
+  a.addEventListener('click', () => { document.getElementById('mobile-nav').style.display = 'none'; });
+});
+
+// ---- ACTIVE NAV ----
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) current = s.id; });
+  document.querySelectorAll('nav a').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+});
+</script>
+</body>
+</html>
